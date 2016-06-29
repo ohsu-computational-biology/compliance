@@ -1,6 +1,7 @@
 package org.ga4gh.ctk.transport;
 
 import java.util.Map;
+import java.util.StringJoiner;
 
 /**
  * This interface provides access to all of the URL paths we need to talk to the server.
@@ -27,13 +28,13 @@ public interface URLMAPPING {
 
     void setGetReadGroup(String getReadGroup);
 
-    String getSearchDatasets();
+    String getSearchDataSets();
 
-    void setSearchDatasets(String searchDatasets);
+    void setSearchDataSets(String searchDataSets);
 
-    String getGetDataset();
+    String getGetDataSet();
 
-    void setGetDataset(String getDataset);
+    void setGetDataSet(String getDataSet);
 
     String getSearchReads();
 
@@ -67,9 +68,9 @@ public interface URLMAPPING {
 
     void setReferenceSets(String referenceSets);
 
-    String getSearchReferencesets();
+    String getSearchReferenceSets();
 
-    void setSearchReferencesets(String searchReferencesets);
+    void setSearchReferenceSets(String searchReferenceSets);
 
     String getSearchVariantSets();
 
@@ -87,13 +88,60 @@ public interface URLMAPPING {
 
     void setGetVariantSet(String getVariantSet);
 
-    String getSearchCallsets();
+    String getSearchCallSets();
 
-    void setSearchCallsets(String searchCallsets);
+    void setSearchCallSets(String searchCallSets);
 
-    String getGetCallset();
+    String getGetCallSet();
 
-    void setGetCallset(String getCallset);
+    void setGetCallSet(String getCallSet);
+
+
+    String getSearchVariantAnnotationSets();
+
+    void setSearchVariantAnnotationSets(String searchVariantAnnotationSets);
+
+    String getGetVariantAnnotationSet();
+
+    void setGetVariantAnnotationSet(String getVariantAnnotationSet);
+
+    String getSearchVariantAnnotations();
+
+    void setSearchVariantAnnotations(String searchVariantAnnotations);
+
+    String getSearchBioSamples();
+
+    void setSearchBioSamples(String searchBioSamples);
+
+    String getGetBioSample();
+
+    void setGetBioSample(String getBioSamples);
+
+    String getSearchIndividuals();
+
+    void setSearchIndividuals(String searchIndividuals);
+
+    String getGetIndividual();
+
+    void setGetIndividual(String getIndividual);
+
+
+    String getSearchFeatureSets();
+
+    void setSearchFeatureSets(String searchFeatureSets);
+
+    String getGetFeatureSet();
+
+    void setGetFeatureSet(String getFeatureSet);
+
+    String getSearchFeatures();
+
+    void setSearchFeatures(String searchFeatures);
+
+    String getGetFeature();
+
+    void setGetFeature(String getFeature);
+
 
     Map<String, String> getEndpoints();
 
