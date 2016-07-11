@@ -3,7 +3,7 @@ package org.ga4gh.cts.api;
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multiset;
 import com.google.common.collect.SetMultimap;
-import org.ga4gh.models.ReferenceSet;
+import ga4gh.References.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -53,6 +53,18 @@ public class TestData {
     public static final long REFERENCE_END = 81187;
 
     /**
+     * The name of the reference used for variant annotation in the standard test data.
+     */
+    public static final String VARIANT_ANNOTATION_REFERENCE_NAME = "1";
+
+
+    /**
+     * The names of the variant annotation sets used for variant annotation in the standard test data.
+     */
+    public static final List<String> VARIANT_ANNOTATION_SET_NAMES =
+            Arrays.asList("WASH7P", "OR4F");
+
+    /**
      * The names of known-good read groups.
      */
     public static final SetMultimap<String, String> EXPECTED_READGROUPSET_READGROUP_NAMES =
@@ -78,7 +90,7 @@ public class TestData {
             EXPECTED_READGROUPSET_READGROUP_NAMES.keys();
 
     /**
-     * The names of all known {@link org.ga4gh.models.ReadGroup} objects, obtained from
+     * The names of all known {@link ga4gh.Reads.ReadGroup} objects, obtained from
      * {@link #EXPECTED_READGROUPSET_READGROUP_NAMES}.
      */
     public static final List<String> EXPECTED_READGROUP_NAMES =
@@ -136,6 +148,21 @@ public class TestData {
     public static final String CALL_SET_NAME = "HG00096";
 
     /**
+     * The BioSample name is used to test searching by BioSample name functionality.
+     */
+    public static final String BIOSAMPLE_NAME = "HG00096";
+
+    /**
+     * The VariantSet name in the test data.
+     */
+    public static final String VARIANTSET_NAME = "1kgPhase3";
+
+    /**
+     * The individual name in the test data.
+     */
+    public static final String INDIVIDUAL_NAME = "HG00096";
+
+    /**
      * Return the ID of the compliance dataset on the server being tested.
      * By default this is the value of {@link #DEFAULT_DATASET_ID}, but
      * you can override it by setting the Java property <tt>-Dctk.tgt.dataset_id</tt>.
@@ -156,7 +183,7 @@ public class TestData {
     /**
      * GenotypePhenotype PHENOTYPE external database identifier.
      */
-    public static final String PHENOTYPE_DB_ID = "37da8697";
+    public static final String PHENOTYPE_DB_ID = "032c97e8";//"37da8697";
 
     /**
      * GenotypePhenotype PHENOTYPE external database Version.
@@ -166,6 +193,46 @@ public class TestData {
      * GenotypePhenotype PHENOTYPE name.
      */
     public static final String PHENOTYPE_NAME =  "GIST";
+
+    /**
+     * GenotypePhenotype PHENOTYPE id.
+     */
+    public static final String PHENOTYPE_ID =  "http://ohsu.edu/cgd/30ebfd1a";
+
+    /**
+     * GenotypePhenotype PHENOTYPE ontology term id.
+     */
+    public static final String PHENOTYPE_ONTOLOGYTERM_ID = "http://ohsu.edu/cgd/5c895709";
+
+    /**
+     * GenotypePhenotype PHENOTYPE ontology term id for sensitivity qualifier.
+     */
+    public static final String PHENOTYPE_SENSITIVITY_ID = "http://purl.obolibrary.org/obo/PATO_0000396";
+
+    /**
+     * GenotypePhenotype PHENOTYPE description.
+     */
+    public static final String PHENOTYPE_DESCRIPTION = "Papillary thyroid carcinoma with sensitivity to therapy";
+
+    /**
+     * GenotypePhenotype PHENOTYPE description wildcard.
+     */
+    public static final String PHENOTYPE_DESCRIPTION_WILDCARD = ".*sensitivity.*";
+
+    /**
+     * GenotypePhenotype PHENOTYPE description for melanoma
+     */
+    public static final String PHENOTYPE_DESCRIPTION = "Melanoma, NOS with response to therapy";
+
+    /**
+     * GenotypePhenotype PHENOTYPE age of on set
+     */
+    public static final String PHENOTYPE_AGE_OF_ON_SET = "http://purl.obolibrary.org/obo/HP_0003581";
+
+    /**
+     * GenotypePhenotype GENOTYPE id
+     */
+    public static final String GENOTYPE_ID = "http://ohsu.edu/cgd/27d2169c";
 
     /**
      * GenotypePhenotype EVIDENCE external database name.
@@ -190,7 +257,7 @@ public class TestData {
     /**
      * GenotypePhenotype EVIDENCE LEVEL.
      */
-    public static final String EVIDENCE_LEVEL = "early trials";
+    public static final String EVIDENCE_LEVEL = "decreased_sensitivity";
 
     /**
      * GenotypePhenotype FEATURE external database name.
@@ -200,7 +267,7 @@ public class TestData {
     /**
      * GenotypePhenotype FEATURE external database identifier.
      */
-    public static final String FEATURE_DB_ID = "4841bf74";
+    public static final String FEATURE_DB_ID = "055b872c";//"4841bf74";
 
     /**
      * GenotypePhenotype FEATURE external database Version.
